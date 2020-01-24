@@ -52,19 +52,48 @@ class VideoCell: UICollectionViewCell {
         return view
     }()
     
+    let profileAvatar: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .blue
+        return imageView
+    }()
+    
+    let videoTitle: UITextView = {
+        let view = UITextView()
+        view.backgroundColor = .purple
+        return view
+    }()
+    
+    let videoInformation: UITextView = {
+        let view = UITextView()
+        view.backgroundColor = .purple
+        return view
+    }()
+    
     func setupViews(){
         backgroundColor = .red
         addSubview(thumbnailImage)
         addSubview(dividerView)
+        addSubview(profileAvatar)
+        addSubview(videoTitle)
+        addSubview(videoInformation)
         // string is auto layout format. |-[...]-| represents the edges. the number is the space between the edges.
         // the dictionary maps the view to the key inside of the contraint string.
         // H is for height, V is for Vertical
-        addFormatConstraints(formatString: "H:|-16-[v0]-16-|", views: thumbnailImage)
-        addFormatConstraints(formatString: "V:|-16-[v0]-16-|", views: thumbnailImage)
-        addFormatConstraints(formatString: "H:|[v0]|", views: dividerView)
         // parenthesis means height of view in pixels
         // ommitting the left pipe prevents the cell from having the view at the top
-        addFormatConstraints(formatString: "V:[v0(1)]|", views: dividerView)
+        addFormatConstraints(formatString: "H:|-16-[v0]-16-|", views: thumbnailImage)
+        addFormatConstraints(formatString: "V:|-16-[v0]-8-[v1(45)]-16-[v2(1)]|", views: thumbnailImage, profileAvatar, dividerView)
+        
+        addFormatConstraints(formatString: "H:|[v0]|", views: dividerView)
+        
+        addFormatConstraints(formatString: "V:[v0(40)]-6-|", views: profileAvatar)
+        
+        addFormatConstraints(formatString: "H:|-55-[v0]-16-|", views: videoTitle)
+        addFormatConstraints(formatString: "V:[v0(15)]-6-|", views: videoTitle)
+        
+        addFormatConstraints(formatString: "H:|-55-[v0]-16-|", views: videoInformation)
+        addFormatConstraints(formatString: "V:[v0(15)]-6-|", views: videoInformation)
     }
     
     required init?(coder: NSCoder) {
