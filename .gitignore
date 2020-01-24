@@ -3,6 +3,9 @@
 *.pbxuser
 *.mode1v3
 
+# Pods
+**Pods/
+
 # old skool
 .svn
 
