@@ -13,7 +13,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
         navigationItem.title = "Yo Mama"
     }
@@ -42,7 +42,7 @@ class VideoCell: UICollectionViewCell {
     
     let thumbnailImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .white
+        imageView.backgroundColor = .red
         return imageView
     }()
     
@@ -71,7 +71,11 @@ class VideoCell: UICollectionViewCell {
     }()
     
     func setupViews(){
-        backgroundColor = .red
+        if #available(iOS 13, *) {
+            backgroundColor = .systemBackground
+        } else {
+            backgroundColor = .black
+        }
         addSubview(thumbnailImage)
         addSubview(dividerView)
         addSubview(profileAvatar)
@@ -79,7 +83,7 @@ class VideoCell: UICollectionViewCell {
         addSubview(videoInformation)
         // string is auto layout format. |-[...]-| represents the edges. the number is the space between the edges.
         // the dictionary maps the view to the key inside of the contraint string.
-        // H is for height, V is for Vertical
+        // H is for horizontal, V is for Vertical
         // parenthesis means height of view in pixels
         // ommitting the left pipe prevents the cell from having the view at the top
         addFormatConstraints(formatString: "H:|-16-[v0]-16-|", views: thumbnailImage)
@@ -87,12 +91,12 @@ class VideoCell: UICollectionViewCell {
         
         addFormatConstraints(formatString: "H:|[v0]|", views: dividerView)
         
-        addFormatConstraints(formatString: "V:[v0(40)]-6-|", views: profileAvatar)
+        addFormatConstraints(formatString: "H:|-16-[v0(45)]", views: profileAvatar)
         
-        addFormatConstraints(formatString: "H:|-55-[v0]-16-|", views: videoTitle)
+        addFormatConstraints(formatString: "H:[v0]-16-|", views: videoTitle)
         addFormatConstraints(formatString: "V:[v0(15)]-6-|", views: videoTitle)
         
-        addFormatConstraints(formatString: "H:|-55-[v0]-16-|", views: videoInformation)
+        addFormatConstraints(formatString: "H:[v0]-16-|", views: videoInformation)
         addFormatConstraints(formatString: "V:[v0(15)]-6-|", views: videoInformation)
     }
     
