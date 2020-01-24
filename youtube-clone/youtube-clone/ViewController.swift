@@ -28,6 +28,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 200)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
 
 class VideoCell: UICollectionViewCell {
@@ -38,26 +42,42 @@ class VideoCell: UICollectionViewCell {
     
     let thumbnailImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .green
+        imageView.backgroundColor = .white
         // allows for auto layout
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
+    let dividerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     func setupViews(){
-        backgroundColor = .white
+        backgroundColor = .red
         addSubview(thumbnailImage)
+        addSubview(dividerView)
         // string is auto layout format. |-[...]-| represents the edges. the number is the space between the edges.
         // the dictionary maps the view to the key inside of the contraint string.
         // H is for height, V is for Vertical
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": thumbnailImage]))
-        
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": thumbnailImage]))
-        
+        addFormatConstraints(formatString: "H:|-16-[v0]-16-|", viewArray: ["v0": thumbnailImage])
+        addFormatConstraints(formatString: "V:|-16-[v0]-16-|", viewArray: ["v0": thumbnailImage])
+        addFormatConstraints(formatString: "H:|[v0]|", viewArray: ["v0": dividerView])
+        // parenthesis means height of view in pixels
+        // ommitting the left pipe prevents the cell from having the view at the top
+        addFormatConstraints(formatString: "V:[v0(1)]|", viewArray: ["v0": dividerView])
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension UIView {
+    func addFormatConstraints(formatString: String, viewArray: [String: UIView]){
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: formatString, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewArray))
     }
 }
 
