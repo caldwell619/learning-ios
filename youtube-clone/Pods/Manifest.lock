@@ -1,0 +1,16 @@
+PODS:
+  - ColorCompatibility (1.0.0)
+
+DEPENDENCIES:
+  - ColorCompatibility
+
+SPEC REPOS:
+  trunk:
+    - ColorCompatibility
+
+SPEC CHECKSUMS:
+  ColorCompatibility: 2762fea4195ed88bfb15eeca3ca5de73bb4a9380
+
+PODFILE CHECKSUM: b2a88da0956195c11a4933025beaaf05eafc83d8
+
+COCOAPODS: 1.8.4

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ColorCompatibility
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -71,11 +72,7 @@ class VideoCell: UICollectionViewCell {
     }()
     
     func setupViews(){
-        if #available(iOS 13, *) {
-            backgroundColor = .systemBackground
-        } else {
-            backgroundColor = .black
-        }
+        backgroundColor = ColorCompatibility.systemBackground
         addSubview(thumbnailImage)
         addSubview(dividerView)
         addSubview(profileAvatar)

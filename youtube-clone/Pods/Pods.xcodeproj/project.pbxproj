@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07820FC81C1843537051560EA69283D5 /* Pods-youtube-clone-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB23325229C82829157EEB079319A0F /* Pods-youtube-clone-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12E7FB4B3C1C679874470E417030B6BE /* ColorCompatibility-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ADD417E5B8BF71E8773460596D380E0 /* ColorCompatibility-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EDA9AE2D04507538BE84A1A9DA0FA12 /* Pods-youtube-clone-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8252EE1B5DF2D1B35C7AEC93E11614 /* Pods-youtube-clone-dummy.m */; };
+		56C94B6BADE75E146ECCF02DE22B978C /* ColorCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28809DFA36E53EE0D895890404E9146C /* ColorCompatibility.swift */; };
+		6B29942556DBDE90902BEAF55F7A9C93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6B40EC78A7FFF782A3B4AC5115C74C87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7324908215CBC4A3896CABBD133B8FBC /* ColorCompatibility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12509869A6FB51125E50B10C565BC1AD /* ColorCompatibility-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D673DD03305B2EEDE6FFF511ADCF05DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F27F5243F638765C8C7945B2BC36E35A;
+			remoteInfo = ColorCompatibility;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12509869A6FB51125E50B10C565BC1AD /* ColorCompatibility-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorCompatibility-dummy.m"; sourceTree = "<group>"; };
+		191DF0DABC99DBB5AE55D506506AE86E /* Pods-youtube-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-youtube-clone.debug.xcconfig"; sourceTree = "<group>"; };
+		25A592BD96B17C26882B52149B1C47E7 /* Pods-youtube-clone.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-youtube-clone.modulemap"; sourceTree = "<group>"; };
+		28809DFA36E53EE0D895890404E9146C /* ColorCompatibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorCompatibility.swift; sourceTree = "<group>"; };
+		2ADD417E5B8BF71E8773460596D380E0 /* ColorCompatibility-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorCompatibility-umbrella.h"; sourceTree = "<group>"; };
+		30CFC482AF117ACF5E045A469BFC1A2E /* ColorCompatibility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ColorCompatibility.framework; path = ColorCompatibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4D8252EE1B5DF2D1B35C7AEC93E11614 /* Pods-youtube-clone-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-youtube-clone-dummy.m"; sourceTree = "<group>"; };
+		5CFBC6EFE872367F8EEAB9C843C4F1C4 /* ColorCompatibility-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ColorCompatibility-Info.plist"; sourceTree = "<group>"; };
+		636D62D0585028892483C257D7E72007 /* ColorCompatibility.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorCompatibility.xcconfig; sourceTree = "<group>"; };
+		7E135AFF1264D6596E40FE9ECFD85DE5 /* ColorCompatibility-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorCompatibility-prefix.pch"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A8582EDE5EB634989DFB1602BEEEF59C /* Pods_youtube_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_youtube_clone.framework; path = "Pods-youtube-clone.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA453D64B5A622FBAFC911802425EE39 /* ColorCompatibility.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ColorCompatibility.modulemap; sourceTree = "<group>"; };
+		C3AFE042D45916CE6D95DFBC4B31568F /* Pods-youtube-clone-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-youtube-clone-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D3CC8ADE11A55F3C0CE3364D8561D6F6 /* Pods-youtube-clone-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-youtube-clone-acknowledgements.plist"; sourceTree = "<group>"; };
+		DFB23325229C82829157EEB079319A0F /* Pods-youtube-clone-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-youtube-clone-umbrella.h"; sourceTree = "<group>"; };
+		EF9557F504B91F0D88E10C071B1D0E8D /* Pods-youtube-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-youtube-clone.release.xcconfig"; sourceTree = "<group>"; };
+		F63E2EA26BC9C25225EC1789188D4CAE /* Pods-youtube-clone-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-youtube-clone-frameworks.sh"; sourceTree = "<group>"; };
+		F8EF30E6C9CE282D2E0D1F7E744F9C6F /* Pods-youtube-clone-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-youtube-clone-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1473FCCBC5290E3F543AA1A17EFCCF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B40EC78A7FFF782A3B4AC5115C74C87 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E69083EED97121B40264918CA87DC90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B29942556DBDE90902BEAF55F7A9C93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E7E71BA1785CAA9A2B39B1CDCCB063F /* ColorCompatibility */ = {
+			isa = PBXGroup;
+			children = (
+				28809DFA36E53EE0D895890404E9146C /* ColorCompatibility.swift */,
+				F6AB0BA479941CDE2798F9AF6280A9C6 /* Support Files */,
+			);
+			name = ColorCompatibility;
+			path = ColorCompatibility;
+			sourceTree = "<group>";
+		};
+		249000BD6E8FB6046903B376B2921EBB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D22C9C81D171BDD18C381716218E3B5D /* Pods-youtube-clone */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		58CE3908FD2056901851B1626D66EC29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30CFC482AF117ACF5E045A469BFC1A2E /* ColorCompatibility.framework */,
+				A8582EDE5EB634989DFB1602BEEEF59C /* Pods_youtube_clone.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C72EE651250744F8342211EF72C0020 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E7E71BA1785CAA9A2B39B1CDCCB063F /* ColorCompatibility */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				6C72EE651250744F8342211EF72C0020 /* Pods */,
+				58CE3908FD2056901851B1626D66EC29 /* Products */,
+				249000BD6E8FB6046903B376B2921EBB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D22C9C81D171BDD18C381716218E3B5D /* Pods-youtube-clone */ = {
+			isa = PBXGroup;
+			children = (
+				25A592BD96B17C26882B52149B1C47E7 /* Pods-youtube-clone.modulemap */,
+				C3AFE042D45916CE6D95DFBC4B31568F /* Pods-youtube-clone-acknowledgements.markdown */,
+				D3CC8ADE11A55F3C0CE3364D8561D6F6 /* Pods-youtube-clone-acknowledgements.plist */,
+				4D8252EE1B5DF2D1B35C7AEC93E11614 /* Pods-youtube-clone-dummy.m */,
+				F63E2EA26BC9C25225EC1789188D4CAE /* Pods-youtube-clone-frameworks.sh */,
+				F8EF30E6C9CE282D2E0D1F7E744F9C6F /* Pods-youtube-clone-Info.plist */,
+				DFB23325229C82829157EEB079319A0F /* Pods-youtube-clone-umbrella.h */,
+				191DF0DABC99DBB5AE55D506506AE86E /* Pods-youtube-clone.debug.xcconfig */,
+				EF9557F504B91F0D88E10C071B1D0E8D /* Pods-youtube-clone.release.xcconfig */,
+			);
+			name = "Pods-youtube-clone";
+			path = "Target Support Files/Pods-youtube-clone";
+			sourceTree = "<group>";
+		};
+		F6AB0BA479941CDE2798F9AF6280A9C6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA453D64B5A622FBAFC911802425EE39 /* ColorCompatibility.modulemap */,
+				636D62D0585028892483C257D7E72007 /* ColorCompatibility.xcconfig */,
+				12509869A6FB51125E50B10C565BC1AD /* ColorCompatibility-dummy.m */,
+				5CFBC6EFE872367F8EEAB9C843C4F1C4 /* ColorCompatibility-Info.plist */,
+				7E135AFF1264D6596E40FE9ECFD85DE5 /* ColorCompatibility-prefix.pch */,
+				2ADD417E5B8BF71E8773460596D380E0 /* ColorCompatibility-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ColorCompatibility";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		80083E2CE9B03A174FDDCBD2BFA23636 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07820FC81C1843537051560EA69283D5 /* Pods-youtube-clone-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2268D1C7876099FB4B0467BDDB666DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E7FB4B3C1C679874470E417030B6BE /* ColorCompatibility-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E61A5D6B66AD059D3EB4944EEF4FBE7F /* Pods-youtube-clone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFDFE3A6A4D903D615772665035E80A /* Build configuration list for PBXNativeTarget "Pods-youtube-clone" */;
+			buildPhases = (
+				80083E2CE9B03A174FDDCBD2BFA23636 /* Headers */,
+				CF73CEDB5154B1FF93B5CA48C9818EBF /* Sources */,
+				1473FCCBC5290E3F543AA1A17EFCCF5D /* Frameworks */,
+				A51F1AFEFC6C70406B392412F292722F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0D57F69A00587E76F8F811AFD8F5AE /* PBXTargetDependency */,
+			);
+			name = "Pods-youtube-clone";
+			productName = "Pods-youtube-clone";
+			productReference = A8582EDE5EB634989DFB1602BEEEF59C /* Pods_youtube_clone.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F27F5243F638765C8C7945B2BC36E35A /* ColorCompatibility */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F369FE68C82734356258509D09C1D0D /* Build configuration list for PBXNativeTarget "ColorCompatibility" */;
+			buildPhases = (
+				F2268D1C7876099FB4B0467BDDB666DA /* Headers */,
+				970D393391E85B012EC4589CCAF877D6 /* Sources */,
+				2E69083EED97121B40264918CA87DC90 /* Frameworks */,
+				E0E93AFE753DA159FC25A87E1AD3D4A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorCompatibility;
+			productName = ColorCompatibility;
+			productReference = 30CFC482AF117ACF5E045A469BFC1A2E /* ColorCompatibility.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 58CE3908FD2056901851B1626D66EC29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F27F5243F638765C8C7945B2BC36E35A /* ColorCompatibility */,
+				E61A5D6B66AD059D3EB4944EEF4FBE7F /* Pods-youtube-clone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A51F1AFEFC6C70406B392412F292722F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0E93AFE753DA159FC25A87E1AD3D4A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		970D393391E85B012EC4589CCAF877D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7324908215CBC4A3896CABBD133B8FBC /* ColorCompatibility-dummy.m in Sources */,
+				56C94B6BADE75E146ECCF02DE22B978C /* ColorCompatibility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF73CEDB5154B1FF93B5CA48C9818EBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDA9AE2D04507538BE84A1A9DA0FA12 /* Pods-youtube-clone-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD0D57F69A00587E76F8F811AFD8F5AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorCompatibility;
+			target = F27F5243F638765C8C7945B2BC36E35A /* ColorCompatibility */;
+			targetProxy = D673DD03305B2EEDE6FFF511ADCF05DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		30A3C447F91C58AFCA915E125F4AA28A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF9557F504B91F0D88E10C071B1D0E8D /* Pods-youtube-clone.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-youtube-clone/Pods-youtube-clone-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-youtube-clone/Pods-youtube-clone.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		34B4EB78572AB1CAAC49B047A2889822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 636D62D0585028892483C257D7E72007 /* ColorCompatibility.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorCompatibility/ColorCompatibility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ColorCompatibility/ColorCompatibility-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ColorCompatibility/ColorCompatibility.modulemap";
+				PRODUCT_MODULE_NAME = ColorCompatibility;
+				PRODUCT_NAME = ColorCompatibility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A25799BDD9F7AF33ED451B542084E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191DF0DABC99DBB5AE55D506506AE86E /* Pods-youtube-clone.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-youtube-clone/Pods-youtube-clone-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-youtube-clone/Pods-youtube-clone.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C953D6F9110ECBBEA6D33D0FD518274A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 636D62D0585028892483C257D7E72007 /* ColorCompatibility.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorCompatibility/ColorCompatibility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ColorCompatibility/ColorCompatibility-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ColorCompatibility/ColorCompatibility.modulemap";
+				PRODUCT_MODULE_NAME = ColorCompatibility;
+				PRODUCT_NAME = ColorCompatibility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BFDFE3A6A4D903D615772665035E80A /* Build configuration list for PBXNativeTarget "Pods-youtube-clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A25799BDD9F7AF33ED451B542084E8E /* Debug */,
+				30A3C447F91C58AFCA915E125F4AA28A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F369FE68C82734356258509D09C1D0D /* Build configuration list for PBXNativeTarget "ColorCompatibility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C953D6F9110ECBBEA6D33D0FD518274A /* Debug */,
+				34B4EB78572AB1CAAC49B047A2889822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131356BE54884448CA49C07BEDF4BB2A /* Debug */,
+				F090CD07A80273D5A73C8EA19224ADDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
