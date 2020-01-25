@@ -80,6 +80,7 @@ class VideoCell: UICollectionViewCell {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.textContainerInset = UIEdgeInsets.init(top: 0, left: -4, bottom: 0, right: 0)
+        textView.isEditable = false
         textView.textColor = .gray
         textView.text = "Tie Interceptor"
         return textView

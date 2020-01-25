@@ -3,6 +3,10 @@
 *.pbxuser
 *.mode1v3
 
+# XCode User Data
+
+**/xcuserdata/
+
 # Pods
 **Pods/
 
