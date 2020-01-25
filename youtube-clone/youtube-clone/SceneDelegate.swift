@@ -23,7 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
-        let homeController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout)) 
+        let homeController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+//        UINavigationBar.appearance().barTintColor = .red
+        UINavigationBar.appearance().alignmentRect(forFrame: CGRect())
         window.rootViewController = homeController
         window.makeKeyAndVisible()
     }

@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // In iOS 13 setup is done in SceneDelegate
         } else {
             self.window?.makeKeyAndVisible()
+            UINavigationBar.appearance().barTintColor = .red
         }
 
         return true

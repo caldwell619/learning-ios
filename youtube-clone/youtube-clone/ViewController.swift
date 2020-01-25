@@ -27,7 +27,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return 5
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        // determine height maintaining 16x9 ratio
+        let height = (view.frame.width - 32) * 9 / 16
+        return CGSize(width: view.frame.width, height: height + 16 + 68)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -55,28 +57,32 @@ class VideoCell: UICollectionViewCell {
         imageView.image = UIImage(named: "empire-logo")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        imageView.layer.masksToBounds = true
         imageView.backgroundColor = .blue
         return imageView
     }()
     
     let dividerView: UIView = {
         let view = UIView()
-        view.backgroundColor = ColorCompatibility.label
+        view.backgroundColor = ColorCompatibility.systemGray4
         return view
     }()
     
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .purple
+        label.text = "Soontir Fel"
         return label
     }()
     
-    let subTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .purple
-        return label
+    let subTitleTextView: UITextView = {
+        let textView = UITextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textContainerInset = UIEdgeInsets.init(top: 0, left: -4, bottom: 0, right: 0)
+        textView.textColor = .gray
+        textView.text = "Tie Interceptor"
+        return textView
     }()
      
     
@@ -86,7 +92,7 @@ class VideoCell: UICollectionViewCell {
         addSubview(dividerView)
         addSubview(profileAvatarView)
         addSubview(titleLabel)
-        addSubview(subTitleLabel)
+        addSubview(subTitleTextView)
         
         
         // string is auto layout format. |-[...]-| represents the edges. the number is the space between the edges.
@@ -99,7 +105,7 @@ class VideoCell: UICollectionViewCell {
         addFormatConstraints(formatString: "H:|[v0]|", views: dividerView)
         addFormatConstraints(formatString: "H:|-16-[v0(45)]", views: profileAvatarView)
         addFormatConstraints(formatString: "V:[v0(20)]", views: titleLabel)
-        addFormatConstraints(formatString: "V:[v0(20)]", views: subTitleLabel)
+        addFormatConstraints(formatString: "V:[v0(30)]", views: subTitleTextView)
 //        addFormatConstraints(formatString: "H:[v0]-16-|", views: titleLabel)
         
         
@@ -107,9 +113,11 @@ class VideoCell: UICollectionViewCell {
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbnailImageView, attribute: .bottom, multiplier: 1, constant: 8))
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: profileAvatarView, attribute: .right, multiplier: 1, constant: 8))
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: subTitleLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 8))
-        addConstraint(NSLayoutConstraint(item: subTitleLabel, attribute: .left, relatedBy: .equal, toItem: profileAvatarView, attribute: .right, multiplier: 1, constant: 8))
-        addConstraint(NSLayoutConstraint(item: subTitleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
+        
+        // subtitle constraints
+        addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 4))
+        addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .left, relatedBy: .equal, toItem: profileAvatarView, attribute: .right, multiplier: 1, constant: 8))
+        addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
     }
     
     required init?(coder: NSCoder) {
