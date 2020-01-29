@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ColorCompatibility
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -24,7 +25,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
 
         let homeController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
-//        UINavigationBar.appearance().barTintColor = .red
+        UINavigationBar.appearance().barTintColor = ColorCompatibility.systemGray2
+        // removes border bottom of bar
+        UINavigationBar.appearance().shadowImage = UIImage()
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().alignmentRect(forFrame: CGRect())
         window.rootViewController = homeController
         window.makeKeyAndVisible()
