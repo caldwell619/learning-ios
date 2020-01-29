@@ -16,7 +16,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Do any additional setup after loading the view.
         collectionView.backgroundColor = .white
         collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
-        navigationItem.title = "Yo Mama"
+        let titleLabel = UILabel(frame: CGRect( x: 0, y: 0, width: view.frame.height - 32, height: view.frame.height))
+        titleLabel.text = "Yo Mama"
+        navigationItem.titleView = titleLabel
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -123,19 +126,6 @@ class VideoCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension UIView {
-    func addFormatConstraints(formatString: String, views: UIView...){
-        var viewDictionary = [String: UIView]()
-        for (index, view) in views.enumerated(){
-            let key = "v\(index)"
-            // allows for auto layout
-            view.translatesAutoresizingMaskIntoConstraints = false
-            viewDictionary[key] = view
-        }
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: formatString, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewDictionary))
     }
 }
 

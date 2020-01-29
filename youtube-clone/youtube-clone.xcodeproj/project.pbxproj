@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3BF19E23DCE603008B1D78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3BF19D23DCE603008B1D78 /* Extensions.swift */; };
 		ACB1B987F899F1D65C57F867 /* Pods_youtube_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAA08E430557DF32808C711 /* Pods_youtube_clone.framework */; };
 		B31AC33623D7B0AD00AB4FF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31AC33523D7B0AD00AB4FF8 /* AppDelegate.swift */; };
 		B31AC33823D7B0AD00AB4FF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31AC33723D7B0AD00AB4FF8 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0FAA08E430557DF32808C711 /* Pods_youtube_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtube_clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3BF19D23DCE603008B1D78 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		576669EC4D2B0B4998B3A9DF /* Pods-youtube-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtube-clone.debug.xcconfig"; path = "Target Support Files/Pods-youtube-clone/Pods-youtube-clone.debug.xcconfig"; sourceTree = "<group>"; };
 		B31AC33223D7B0AD00AB4FF8 /* youtube-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31AC33523D7B0AD00AB4FF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,13 +50,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3B3BF19C23DCE5ED008B1D78 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3B3BF19D23DCE603008B1D78 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8CFCB84513C72D8BA4BA6DF7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				576669EC4D2B0B4998B3A9DF /* Pods-youtube-clone.debug.xcconfig */,
 				D6352B64E05D75E8F6849920 /* Pods-youtube-clone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,6 +88,7 @@
 		B31AC33423D7B0AD00AB4FF8 /* youtube-clone */ = {
 			isa = PBXGroup;
 			children = (
+				3B3BF19C23DCE5ED008B1D78 /* Helpers */,
 				B31AC33523D7B0AD00AB4FF8 /* AppDelegate.swift */,
 				B31AC33723D7B0AD00AB4FF8 /* SceneDelegate.swift */,
 				B31AC33923D7B0AD00AB4FF8 /* ViewController.swift */,
@@ -206,6 +216,7 @@
 				B31AC33A23D7B0AD00AB4FF8 /* ViewController.swift in Sources */,
 				B31AC33623D7B0AD00AB4FF8 /* AppDelegate.swift in Sources */,
 				B31AC33823D7B0AD00AB4FF8 /* SceneDelegate.swift in Sources */,
+				3B3BF19E23DCE603008B1D78 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
