@@ -9,11 +9,7 @@
 import UIKit
 import ColorCompatibility
 
-class VideoCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
+class VideoCell: BaseCell {
     
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
@@ -59,7 +55,7 @@ class VideoCell: UICollectionViewCell {
     }()
      
     
-    func setupViews(){
+    override func setupViews(){
         backgroundColor = ColorCompatibility.systemBackground
         addSubview(thumbnailImageView)
         addSubview(dividerView)
@@ -93,8 +89,5 @@ class VideoCell: UICollectionViewCell {
         addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 

@@ -8,22 +8,13 @@
 
 import UIKit
 
-class MenuCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+class MenuCell: BaseCell {
     let iconView: UIImageView = {
         let iv = UIImageView()
         return iv
     }()
     
-    func setupViews(){
+    override func setupViews() {
         backgroundColor = .blue
         addSubview(iconView)
         addFormatConstraints(formatString: "H:|[v0]|", views: iconView)

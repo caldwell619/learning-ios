@@ -17,6 +17,7 @@
 		B31AC33A23D7B0AD00AB4FF8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31AC33923D7B0AD00AB4FF8 /* HomeController.swift */; };
 		B31AC33C23D7B0AE00AB4FF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31AC33B23D7B0AE00AB4FF8 /* Assets.xcassets */; };
 		B31AC33F23D7B0AE00AB4FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31AC33D23D7B0AE00AB4FF8 /* LaunchScreen.storyboard */; };
+		B322414A23E1E0A9004D6EF0 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B322414923E1E0A9004D6EF0 /* BaseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B31AC33B23D7B0AE00AB4FF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B31AC33E23D7B0AE00AB4FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B31AC34023D7B0AE00AB4FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B322414923E1E0A9004D6EF0 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		D6352B64E05D75E8F6849920 /* Pods-youtube-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtube-clone.release.xcconfig"; path = "Target Support Files/Pods-youtube-clone/Pods-youtube-clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				3B3BF1A123E147F0008B1D78 /* VideoCell.swift */,
 				3B3BF1A323E14883008B1D78 /* MenuBar.swift */,
 				3B3BF1A523E1BC8E008B1D78 /* MenuCell.swift */,
+				B322414923E1E0A9004D6EF0 /* BaseCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				3B3BF1A223E147F0008B1D78 /* VideoCell.swift in Sources */,
 				B31AC33A23D7B0AD00AB4FF8 /* HomeController.swift in Sources */,
 				3B3BF1A423E14883008B1D78 /* MenuBar.swift in Sources */,
+				B322414A23E1E0A9004D6EF0 /* BaseCell.swift in Sources */,
 				B31AC33623D7B0AD00AB4FF8 /* AppDelegate.swift in Sources */,
 				B31AC33823D7B0AD00AB4FF8 /* SceneDelegate.swift in Sources */,
 				3B3BF19E23DCE603008B1D78 /* Extensions.swift in Sources */,

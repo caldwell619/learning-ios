@@ -15,6 +15,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView.backgroundColor = .white
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
+        // starts CollectionView below the menu bar
+        collectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        // starts scroll indicator below the menu bar
+        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         let titleLabel = UILabel(frame: CGRect( x: 0, y: 0, width: view.frame.height - 32, height: view.frame.height))
         titleLabel.text = "Yo Mama"
         navigationItem.titleView = titleLabel

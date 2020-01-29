@@ -5,6 +5,7 @@
 
 # XCode User Data
 **/xcuserdata/
+xcuserdata
 
 # Pods
 **Pods/
