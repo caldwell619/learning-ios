@@ -28,7 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().barTintColor = ColorCompatibility.systemGray2
         // removes border bottom of bar
         UINavigationBar.appearance().shadowImage = UIImage()
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().alignmentRect(forFrame: CGRect())
         window.rootViewController = homeController
         window.makeKeyAndVisible()
