@@ -11,6 +11,7 @@ import UIKit
 class MenuCell: BaseCell {
     let iconView: UIImageView = {
         let iv = UIImageView()
+        iv.image = UIImage(named: "home-icon")
         return iv
     }()
     
