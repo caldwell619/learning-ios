@@ -7,18 +7,29 @@
 //
 
 import UIKit
+import ColorCompatibility
 
 class MenuCell: BaseCell {
     let iconView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "home-icon")
+        iv.tintColor = ColorCompatibility.systemGray5
         return iv
     }()
     
+    override var isSelected: Bool {
+        didSet {
+          iconView.tintColor = super.isSelected
+              ? .white
+              : ColorCompatibility.systemGray5
+        }
+    }
+    
     override func setupViews() {
-        backgroundColor = .blue
+        backgroundColor = ColorCompatibility.systemGray2
         addSubview(iconView)
-        addFormatConstraints(formatString: "H:|[v0]|", views: iconView)
-        addFormatConstraints(formatString: "V:|[v0]|", views: iconView)
+        addFormatConstraints(formatString: "H:[v0(28)]", views: iconView)
+        addFormatConstraints(formatString: "V:[v0(28)]", views: iconView)
+        addConstraint(NSLayoutConstraint(item: iconView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: iconView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }
 }

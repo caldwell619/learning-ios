@@ -12,6 +12,7 @@ import ColorCompatibility
 class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let cellId = "cellId"
+    let namesOfMenuCellImages = ["home-icon", "trending-icon", "subscription-icon", "person-icon"]
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -26,6 +27,10 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDeleg
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCollectionView()
+        
+        // selects the 1st index cell by default
+        let selectedIndexPath = NSIndexPath(item: 0, section: 0)
+        collectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: .bottom)
     }
     
     func setupCollectionView(){
@@ -39,7 +44,13 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        // downcasting the cell to conform to MenuCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
+        // capturing the index of the iterated cells, and using it as the key to image
+        let nameOfIndexAtIndexPath = namesOfMenuCellImages[indexPath.item]
+        let icon = UIImage(named: nameOfIndexAtIndexPath)?.withRenderingMode(
+            UIImage.RenderingMode.alwaysTemplate)
+        cell.iconView.image = icon
         return cell
     }
     
@@ -48,7 +59,6 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // determine height maintaining 16x9 ratio
         let height = frame.height
         let width = frame.width / 4
         return CGSize(width: width, height: height)
