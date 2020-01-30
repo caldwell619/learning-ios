@@ -10,6 +10,18 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    var videos: [Video] = {
+        let firstVideo = Video()
+        firstVideo.titleOfVideo = "Soontir Fel"
+        firstVideo.subTitleOfVideo = "TIE Interceptor"
+        firstVideo.thumbnailImageName = "tie-interceptor"
+        let secondVideo = Video()
+        secondVideo.titleOfVideo = "Countess Ryad"
+        secondVideo.subTitleOfVideo = "TIE Defender"
+        secondVideo.thumbnailImageName = "tie-defender"
+        return [firstVideo, secondVideo]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -24,6 +36,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.titleView = titleLabel
         navigationController?.navigationBar.isTranslucent = false
         setupMenuBar()
+        setupNavBar()
         
     }
     
@@ -39,13 +52,38 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         view.addFormatConstraints(formatString: "V:|[v0(50)]", views: menuBar)
     }
     
+    func createUIBarButtonItem(nameOfImage: String, handler: Selector) -> UIBarButtonItem {
+        let icon = UIImage(named: nameOfImage)?.withRenderingMode(
+        UIImage.RenderingMode.alwaysTemplate)
+        
+        let mvButtonItem = UIBarButtonItem(image: icon, style: .plain, target: self, action: handler)
+        mvButtonItem.tintColor = .white
+        return mvButtonItem
+    }
+    
+    @objc func handleMore(){
+        print("more tapped")
+    }
+    
+    @objc func handleSearch(){
+        print("seach tapped")
+    }
+    
+    private func setupNavBar(){
+        let moreVerticalButtonItem = createUIBarButtonItem(nameOfImage: "more-vert-icon", handler: #selector(handleMore))
+        let searchButtonItem = createUIBarButtonItem(nameOfImage: "search-icon", handler: #selector(handleSearch))
+        navigationItem.rightBarButtonItems = [moreVerticalButtonItem, searchButtonItem]
+    }
+    
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! VideoCell
+        
+        cell.video = videos[indexPath.item]
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return videos.count
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // determine height maintaining 16x9 ratio

@@ -11,6 +11,14 @@ import ColorCompatibility
 
 class VideoCell: BaseCell {
     
+    var video: Video? {
+        didSet {
+            thumbnailImageView.image = UIImage(named: video!.thumbnailImageName!)
+            titleLabel.text = video?.titleOfVideo
+            subTitleTextView.text = video?.subTitleOfVideo
+        }
+    }
+    
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "tie-interceptor")
