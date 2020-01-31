@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let layout = UICollectionViewFlowLayout()
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-
         let homeController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         UINavigationBar.appearance().barTintColor = ColorCompatibility.systemGray2
         // removes border bottom of bar

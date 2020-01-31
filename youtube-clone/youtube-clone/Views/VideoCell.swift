@@ -24,7 +24,6 @@ class VideoCell: BaseCell {
         imageView.image = UIImage(named: "tie-interceptor")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.backgroundColor = .red
         return imageView
     }()
     

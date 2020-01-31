@@ -14,4 +14,11 @@ class Video: NSObject {
     var avatarImageName: String?
     var titleOfVideo: String?
     var subTitleOfVideo: String?
+    
+    init(thumbnailImageName: String?, avatarImageName: String?, titleOfVideo: String?, subTitleOfVideo: String?) {
+        self.thumbnailImageName = thumbnailImageName
+        self.avatarImageName = avatarImageName
+        self.titleOfVideo = titleOfVideo
+        self.subTitleOfVideo = subTitleOfVideo
+    }
 }

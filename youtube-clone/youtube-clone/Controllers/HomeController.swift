@@ -7,24 +7,21 @@
 //
 
 import UIKit
+import ColorCompatibility
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    
+    
     var videos: [Video] = {
-        let firstVideo = Video()
-        firstVideo.titleOfVideo = "Soontir Fel"
-        firstVideo.subTitleOfVideo = "TIE Interceptor"
-        firstVideo.thumbnailImageName = "tie-interceptor"
-        let secondVideo = Video()
-        secondVideo.titleOfVideo = "Countess Ryad"
-        secondVideo.subTitleOfVideo = "TIE Defender"
-        secondVideo.thumbnailImageName = "tie-defender"
+        let firstVideo = Video(thumbnailImageName: "tie-interceptor", avatarImageName: "tie-interceptor", titleOfVideo: "Soontir Fel", subTitleOfVideo: "TIE Interceptor")
+        let secondVideo = Video(thumbnailImageName: "tie-defender", avatarImageName: "tie-interceptor", titleOfVideo: "Countess Ryad", subTitleOfVideo: "TIE Defender")
         return [firstVideo, secondVideo]
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = ColorCompatibility.systemBackground
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
         // starts CollectionView below the menu bar

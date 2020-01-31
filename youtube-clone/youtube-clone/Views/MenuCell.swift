@@ -19,8 +19,8 @@ class MenuCell: BaseCell {
     override var isSelected: Bool {
         didSet {
           iconView.tintColor = super.isSelected
-              ? .white
-              : ColorCompatibility.systemGray5
+              ? ColorCompatibility.label
+            : ColorCompatibility.systemGray5
         }
     }
     
