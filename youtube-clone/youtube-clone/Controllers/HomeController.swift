@@ -16,7 +16,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var videos: [Video] = {
         let firstVideo = Video(thumbnailImageName: "tie-interceptor", avatarImageName: "tie-interceptor", titleOfVideo: "Soontir Fel", subTitleOfVideo: "TIE Interceptor")
         let secondVideo = Video(thumbnailImageName: "tie-defender", avatarImageName: "tie-interceptor", titleOfVideo: "Countess Ryad", subTitleOfVideo: "TIE Defender")
-        return [firstVideo, secondVideo]
+        let thirdVideo = Video(thumbnailImageName: "tie-phantom", avatarImageName: "tie-interceptor", titleOfVideo: "Whisper", subTitleOfVideo: "TIE Phantom")
+        let fourthVideo = Video(thumbnailImageName: "lambda-shuttle", avatarImageName: "tie-interceptor", titleOfVideo: "Colonel Jendon", subTitleOfVideo: "Lambda Shuttle")
+        return [firstVideo, secondVideo, thirdVideo, fourthVideo]
     }()
     
     override func viewDidLoad() {
@@ -29,7 +31,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // starts scroll indicator below the menu bar
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         let titleLabel = UILabel(frame: CGRect( x: 0, y: 0, width: view.frame.height - 32, height: view.frame.height))
-        titleLabel.text = "Yo Mama"
+        titleLabel.text = "  Yo Mama"
         navigationItem.titleView = titleLabel
         navigationController?.navigationBar.isTranslucent = false
         setupMenuBar()
@@ -43,10 +45,21 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }()
     
     private func setupMenuBar(){
+        navigationController?.hidesBarsOnSwipe = true
         edgesForExtendedLayout = []
+        
+        // view that hides temporary transition
+        let backgoudHiderView = UIView()
+        backgoudHiderView.backgroundColor = ColorCompatibility.systemGray2
+        view.addSubview(backgoudHiderView)
+        view.addFormatConstraints(formatString: "H:|[v0]|", views: backgoudHiderView)
+        view.addFormatConstraints(formatString: "V:|[v0(50)]", views: backgoudHiderView)
+        
+        // menu bar containing nav icons
         view.addSubview(menuBar)
         view.addFormatConstraints(formatString: "H:|[v0]|", views: menuBar)
-        view.addFormatConstraints(formatString: "V:|[v0(50)]", views: menuBar)
+        view.addFormatConstraints(formatString: "V:[v0(50)]", views: menuBar)
+        menuBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     }
     
     func createUIBarButtonItem(nameOfImage: String, handler: Selector) -> UIBarButtonItem {

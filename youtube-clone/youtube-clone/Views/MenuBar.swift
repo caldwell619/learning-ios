@@ -31,6 +31,41 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDeleg
         // selects the 1st index cell by default
         let selectedIndexPath = NSIndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: .bottom)
+        setupHorizontalBar()
+    }
+    
+    let horizontalBarView: UIView = {
+        let localHorizontalBarView = UIView()
+        localHorizontalBarView.translatesAutoresizingMaskIntoConstraints = false
+        localHorizontalBarView.backgroundColor = ColorCompatibility.label
+        return localHorizontalBarView
+    }()
+    
+    var horizontalBarLeftAnchor: NSLayoutConstraint?
+    
+    func setupHorizontalBar(){
+        addSubview(horizontalBarView)
+        // setting anchor contraints to itself
+        
+        // setting the left anchor of the horizontal bar to the left anchor of the menu bar
+        horizontalBarLeftAnchor = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
+        
+        horizontalBarLeftAnchor?.isActive = true
+        horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        // setting the width of the bar to equal the menu bar width, multipled by 1/4
+        horizontalBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/4).isActive = true
+        
+        // 4 px
+        horizontalBarView.heightAnchor.constraint(equalToConstant: 4 ).isActive = true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let xPositionOfMenuBar = CGFloat(indexPath.item) * frame.width / 4
+        horizontalBarLeftAnchor?.constant = xPositionOfMenuBar
+        UIView.animate(withDuration: 0.25, animations: {
+            self.layoutIfNeeded()
+            })
     }
     
     func setupCollectionView(){
