@@ -63,9 +63,9 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let xPositionOfMenuBar = CGFloat(indexPath.item) * frame.width / 4
         horizontalBarLeftAnchor?.constant = xPositionOfMenuBar
-        UIView.animate(withDuration: 0.25, animations: {
+        UIView.animate(withDuration: 0.45, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.layoutIfNeeded()
-            })
+        }, completion: nil)
     }
     
     func setupCollectionView(){
