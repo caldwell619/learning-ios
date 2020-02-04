@@ -15,8 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+         // Override point for customization after application launch.
+       if #available(iOS 13.0, *) {
+           // In iOS 13 setup is done in SceneDelegate
+       } else {
+           self.window?.makeKeyAndVisible()
+           UINavigationBar.appearance().barTintColor = .red
+       }
+
+       return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
