@@ -47,7 +47,6 @@ class VideoCell: BaseCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Soontir Fel"
         return label
     }()
     
@@ -57,7 +56,6 @@ class VideoCell: BaseCell {
         textView.textContainerInset = UIEdgeInsets.init(top: 0, left: -4, bottom: 0, right: 0)
         textView.isEditable = false
         textView.textColor = .gray
-        textView.text = "Tie Interceptor"
         return textView
     }()
      

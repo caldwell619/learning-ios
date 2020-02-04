@@ -1,13 +1,12 @@
 //
 //  SceneDelegate.swift
-//  youtube-clone
+//  controller-tutorial
 //
-//  Created by Christopher Caldwell on 1/21/20.
-//  Copyright © 2020 Christopher Caldwell. All rights reserved.
+//  Created by Chris Caldwell on 2/3/20.
+//  Copyright © 2020 Chris Caldwell. All rights reserved.
 //
 
 import UIKit
-import ColorCompatibility
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -19,19 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
-        let window = UIWindow(windowScene: windowScene)
-        self.window = window
-        let homeController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
-        UINavigationBar.appearance().barTintColor = ColorCompatibility.systemGray2
-        // removes border bottom of bar
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().alignmentRect(forFrame: CGRect())
-        window.rootViewController = homeController
-        window.makeKeyAndVisible()
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
