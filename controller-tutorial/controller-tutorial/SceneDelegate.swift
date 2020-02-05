@@ -18,10 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-//        let homeController = UINavigationController(rootViewController: ViewController())
-        let rootController = UITabBarController()
-        rootController.viewControllers = [ViewController()]
-    
+        let rootController = TabCarController()
+        
 //        UINavigationBar.appearance().barTintColor = ColorCompatibility.systemGray2
         // removes border bottom of bar
         UINavigationBar.appearance().shadowImage = UIImage()

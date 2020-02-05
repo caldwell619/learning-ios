@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ColorCompatibility
 
 class TestController: UIViewController {
     override func viewDidLoad() {
@@ -23,12 +24,12 @@ class TestController: UIViewController {
         view.addSubview(switchButton)
     }
     @objc func buttonAction(sender: UIButton!) {
-        self.navigationController?.popToViewController(ViewController.init(), animated: true)
+        self.navigationController?.pushViewController(ViewController.init(), animated: true)
     }
     
     let testView: UIView = {
         let tv = UIView()
-        tv.backgroundColor = .green
+        tv.backgroundColor = ColorCompatibility.systemBackground
         return tv
     }()
     let switchButton: UIButton = {

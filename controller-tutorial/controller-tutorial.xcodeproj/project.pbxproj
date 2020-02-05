@@ -14,6 +14,14 @@
 		3B3BF1C323E8EBDF008B1D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BF1C123E8EBDF008B1D78 /* LaunchScreen.storyboard */; };
 		3B3BF20723E8EEA0008B1D78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3BF20623E8EEA0008B1D78 /* Extensions.swift */; };
 		3B6674BB23EA5A0400003724 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674BA23EA5A0400003724 /* Home.swift */; };
+		3B6674BD23EA7CFE00003724 /* TabCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674BC23EA7CFE00003724 /* TabCarController.swift */; };
+		3B6674BF23EA844E00003724 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674BE23EA844E00003724 /* HomeController.swift */; };
+		3B6674C223EA847500003724 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674C123EA847500003724 /* Pet.swift */; };
+		3B6674C423EA863A00003724 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674C323EA863A00003724 /* BaseCell.swift */; };
+		3B6674C623EA866900003724 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674C523EA866900003724 /* MenuBar.swift */; };
+		3B6674C823EA868E00003724 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674C723EA868E00003724 /* MenuCell.swift */; };
+		3B6674CA23EA86B400003724 /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674C923EA86B400003724 /* PetCell.swift */; };
+		3B6674CC23EA8B0100003724 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6674CB23EA8B0100003724 /* AddController.swift */; };
 		3BBC1A4923E8EF6300FC3EB3 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBC1A4823E8EF6300FC3EB3 /* TestController.swift */; };
 		EAEBEF5D08C9BB17D8DE90B3 /* Pods_controller_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01B3702ADE7A3B8E178ACFB /* Pods_controller_tutorial.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +71,14 @@
 		3B3BF1EA23E8EBE0008B1D78 /* controller-tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "controller-tutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3BF20623E8EEA0008B1D78 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3B6674BA23EA5A0400003724 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3B6674BC23EA7CFE00003724 /* TabCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCarController.swift; sourceTree = "<group>"; };
+		3B6674BE23EA844E00003724 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		3B6674C123EA847500003724 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		3B6674C323EA863A00003724 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		3B6674C523EA866900003724 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		3B6674C723EA868E00003724 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		3B6674C923EA86B400003724 /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
+		3B6674CB23EA8B0100003724 /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 		3BBC1A4823E8EF6300FC3EB3 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		3F80ED18A53B1E584AEA4252 /* Pods-controller-tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-controller-tutorial.release.xcconfig"; path = "Target Support Files/Pods-controller-tutorial/Pods-controller-tutorial.release.xcconfig"; sourceTree = "<group>"; };
 		7561216B24123A1076A85373 /* Pods-controller-tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-controller-tutorial.debug.xcconfig"; path = "Target Support Files/Pods-controller-tutorial/Pods-controller-tutorial.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +150,7 @@
 		3B3BF1B523E8EBDC008B1D78 /* controller-tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				3B6674C023EA845900003724 /* Models */,
 				3B6674B423E9298A00003724 /* Views */,
 				3B3BF20523E8EE94008B1D78 /* Helpers */,
 				3B3BF20223E8EC29008B1D78 /* Controllers */,
@@ -151,6 +168,9 @@
 			children = (
 				3B3BF1BA23E8EBDC008B1D78 /* ViewController.swift */,
 				3BBC1A4823E8EF6300FC3EB3 /* TestController.swift */,
+				3B6674BC23EA7CFE00003724 /* TabCarController.swift */,
+				3B6674BE23EA844E00003724 /* HomeController.swift */,
+				3B6674CB23EA8B0100003724 /* AddController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,8 +187,20 @@
 			isa = PBXGroup;
 			children = (
 				3B6674BA23EA5A0400003724 /* Home.swift */,
+				3B6674C323EA863A00003724 /* BaseCell.swift */,
+				3B6674C523EA866900003724 /* MenuBar.swift */,
+				3B6674C723EA868E00003724 /* MenuCell.swift */,
+				3B6674C923EA86B400003724 /* PetCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3B6674C023EA845900003724 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B6674C123EA847500003724 /* Pet.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9FB13F59DB5383FBE09D2054 /* Pods */ = {
@@ -423,10 +455,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBC1A4923E8EF6300FC3EB3 /* TestController.swift in Sources */,
+				3B6674BD23EA7CFE00003724 /* TabCarController.swift in Sources */,
+				3B6674CA23EA86B400003724 /* PetCell.swift in Sources */,
+				3B6674C823EA868E00003724 /* MenuCell.swift in Sources */,
 				3B3BF1BB23E8EBDC008B1D78 /* ViewController.swift in Sources */,
+				3B6674CC23EA8B0100003724 /* AddController.swift in Sources */,
+				3B6674C223EA847500003724 /* Pet.swift in Sources */,
 				3B3BF1B723E8EBDC008B1D78 /* AppDelegate.swift in Sources */,
+				3B6674BF23EA844E00003724 /* HomeController.swift in Sources */,
 				3B3BF1B923E8EBDC008B1D78 /* SceneDelegate.swift in Sources */,
 				3B6674BB23EA5A0400003724 /* Home.swift in Sources */,
+				3B6674C423EA863A00003724 /* BaseCell.swift in Sources */,
+				3B6674C623EA866900003724 /* MenuBar.swift in Sources */,
 				3B3BF20723E8EEA0008B1D78 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

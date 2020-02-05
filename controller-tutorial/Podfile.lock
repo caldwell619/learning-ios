@@ -1,4 +1,5 @@
 PODS:
+  - ColorCompatibility (1.0.0)
   - MaterialComponents (103.1.0):
     - MaterialComponents/ActionSheet (= 103.1.0)
     - "MaterialComponents/ActionSheet+Theming (= 103.1.0)"
@@ -576,10 +577,12 @@ PODS:
   - MotionInterchange (1.6.0)
 
 DEPENDENCIES:
+  - ColorCompatibility
   - MaterialComponents
 
 SPEC REPOS:
   trunk:
+    - ColorCompatibility
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -587,12 +590,13 @@ SPEC REPOS:
     - MotionInterchange
 
 SPEC CHECKSUMS:
+  ColorCompatibility: 2762fea4195ed88bfb15eeca3ca5de73bb4a9380
   MaterialComponents: 0312a643d1aed5e5f10cba4be06a6aa62bd07c14
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
 
-PODFILE CHECKSUM: f10204504dee458a5dbc310cce552fe91a417689
+PODFILE CHECKSUM: 422491dd87bf2ad28d677a9e56a7e4a5cb0e5e39
 
 COCOAPODS: 1.8.4

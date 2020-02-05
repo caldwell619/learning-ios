@@ -9,7 +9,7 @@
 import UIKit
 import ColorCompatibility
 
-class ViewController: UIViewController {
+class AddController: UIViewController {
     
     let homeView: Home = {
         let hv = Home()
