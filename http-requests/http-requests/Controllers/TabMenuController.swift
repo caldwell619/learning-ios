@@ -14,27 +14,27 @@ class TabMenuController: UITabBarController {
     }
     
     let homeController: HomeController = {
-        let constroller = HomeController()
-        return constroller
+        let controller = HomeController()
+        return controller
     }()
     
     let getRequestController: GetRequestController = {
-        let constroller = GetRequestController()
-        return constroller
+        let controller = GetRequestController()
+        return controller
     }()
     
     let postRequestController: PostRequestController = {
-        let constroller = PostRequestController()
-        return constroller
+        let controller = PostRequestController()
+        return controller
     }()
     
     let deleteRequestController: DeleteRequestController = {
-        let constroller = DeleteRequestController()
-        return constroller
+        let controller = DeleteRequestController()
+        return controller
     }()
     
     let putRequestController: PutRequestController = {
-        let constroller = PutRequestController()
-        return constroller
+        let controller = PutRequestController()
+        return controller
     }()
 }
