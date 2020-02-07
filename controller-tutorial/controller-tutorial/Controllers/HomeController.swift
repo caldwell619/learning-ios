@@ -87,7 +87,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     private func setupNavBar(){
-        let moreVerticalButtonItem = createUIBarButtonItem(nameOfImage: "more-vert-icon", handler: #selector(handleMore))
+        let moreVerticalButtonItem = createUIBarButtonItem(nameOfImage: "more-vert", handler: #selector(handleMore))
         let searchButtonItem = createUIBarButtonItem(nameOfImage: "search-icon", handler: #selector(handleSearch))
         navigationItem.rightBarButtonItems = [moreVerticalButtonItem, searchButtonItem]
     }

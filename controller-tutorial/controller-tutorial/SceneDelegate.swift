@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ColorCompatibility
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -20,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         let rootController = TabCarController()
         
-//        UINavigationBar.appearance().barTintColor = ColorCompatibility.systemGray2
+        UINavigationBar.appearance().barTintColor = ColorCompatibility.systemGray2
         // removes border bottom of bar
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().alignmentRect(forFrame: CGRect())
