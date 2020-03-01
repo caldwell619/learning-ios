@@ -13,28 +13,38 @@ class TabMenuController: UITabBarController {
         viewControllers = [homeController, getRequestController, postRequestController, deleteRequestController, putRequestController]
     }
     
-    let homeController: HomeController = {
-        let controller = HomeController()
+    let homeController: UINavigationController = {
+        let controller = UINavigationController(rootViewController: HomeController())
+        controller.tabBarItem.image = UIImage(named: "home")
+        controller.title = "Get"
         return controller
     }()
     
-    let getRequestController: GetRequestController = {
-        let controller = GetRequestController()
+    let getRequestController: UINavigationController = {
+        let controller = UINavigationController(rootViewController: GetRequestController())
+        controller.title = "Get"
+        controller.tabBarItem.image = UIImage(named: "get")
         return controller
     }()
     
-    let postRequestController: PostRequestController = {
-        let controller = PostRequestController()
+    let postRequestController: UINavigationController = {
+        let controller = UINavigationController(rootViewController: PostRequestController())
+        controller.title = "Post"
+        controller.tabBarItem.image = UIImage(named: "save")
         return controller
     }()
     
-    let deleteRequestController: DeleteRequestController = {
-        let controller = DeleteRequestController()
+    let deleteRequestController: UINavigationController = {
+        let controller = UINavigationController(rootViewController: DeleteRequestController())
+        controller.title = "Delete"
+        controller.tabBarItem.image = UIImage(named: "delete")
         return controller
     }()
     
-    let putRequestController: PutRequestController = {
-        let controller = PutRequestController()
+    let putRequestController: UINavigationController = {
+        let controller = UINavigationController(rootViewController: PutRequestController())
+        controller.title = "Put"
+        controller.tabBarItem.image = UIImage(named: "put")
         return controller
     }()
 }

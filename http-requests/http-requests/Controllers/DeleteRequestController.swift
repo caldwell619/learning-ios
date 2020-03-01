@@ -8,14 +8,11 @@
 
 import UIKit
 
-class DeleteRequestController: UINavigationController {
+class DeleteRequestController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.title = "Delete"
-        self.tabBarItem.image = UIImage(named: "home")
-        self.view.backgroundColor = .red
+        title = "Delete"
     }
 }
 

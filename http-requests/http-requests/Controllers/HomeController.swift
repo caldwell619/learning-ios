@@ -8,17 +8,11 @@
 
 import UIKit
 
-class HomeController: UINavigationController {
+class HomeController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let titleLabel = UILabel(frame: CGRect( x: 0, y: 0, width: view.frame.height - 32, height: view.frame.height))
-        titleLabel.text = "  Yo Mama"
-        navigationItem.titleView = titleLabel
-        navigationController?.navigationBar.isTranslucent = false
-        self.title = "Home"
-        self.tabBarItem.image = UIImage(named: "home")
-        self.view.backgroundColor = .blue
+        title = "Home"
     }
 }
 
